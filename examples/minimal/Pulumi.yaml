@@ -1,0 +1,12 @@
+name: purifier-proof
+runtime: yaml
+resources:
+  answer:
+    type: random:index:RandomInteger
+    properties:
+      min: 42
+      max: 42
+    options:
+      version: 4.14.0
+outputs:
+  answer: ${answer.result}

@@ -1,0 +1,95 @@
+{
+  "purifier": "pulumi",
+  "sdk": "b6db799cdac2aa7c2d60aafc04dbf11413aceec505f4309a84d61199fc0f92eb",
+  "selection": [
+    {
+      "Checksums": null,
+      "Kind": "language",
+      "Name": "yaml",
+      "PluginDownloadURL": "",
+      "Version": "1.38.16"
+    },
+    {
+      "Checksums": null,
+      "Kind": "resource",
+      "Name": "random",
+      "PluginDownloadURL": "",
+      "Version": "4.14.0"
+    }
+  ],
+  "systems": {
+    "aarch64-linux": {
+      "entries": [
+        {
+          "hash": "sha256-S53TXZwU9zsdwEfZhpYTikrq0kws6gyNS30ABMDPzjk=",
+          "mirrors": [],
+          "path": "archive-0",
+          "pulumi": {
+            "directory": "language-yaml-v1.38.16",
+            "spec": {
+              "Checksums": null,
+              "Kind": "language",
+              "Name": "yaml",
+              "PluginDownloadURL": "",
+              "Version": "1.38.16"
+            }
+          },
+          "url": "https://github.com/pulumi/pulumi-yaml/releases/download/v1.38.16/pulumi-language-yaml-v1.38.16-linux-arm64.tar.gz"
+        },
+        {
+          "hash": "sha256-U3ZISvJITn99rGxhz6a/GDWOsH0NDkZWWmgn5XTJk6M=",
+          "mirrors": [],
+          "path": "archive-1",
+          "pulumi": {
+            "directory": "resource-random-v4.14.0",
+            "spec": {
+              "Checksums": null,
+              "Kind": "resource",
+              "Name": "random",
+              "PluginDownloadURL": "",
+              "Version": "4.14.0"
+            }
+          },
+          "url": "https://github.com/pulumi/pulumi-random/releases/download/v4.14.0/pulumi-resource-random-v4.14.0-linux-arm64.tar.gz"
+        }
+      ]
+    },
+    "x86_64-linux": {
+      "entries": [
+        {
+          "hash": "sha256-z97XoiEihHRKmaBXx2yEX1j/vtzxlYQ6XkmX70inx/s=",
+          "mirrors": [],
+          "path": "archive-0",
+          "pulumi": {
+            "directory": "language-yaml-v1.38.16",
+            "spec": {
+              "Checksums": null,
+              "Kind": "language",
+              "Name": "yaml",
+              "PluginDownloadURL": "",
+              "Version": "1.38.16"
+            }
+          },
+          "url": "https://github.com/pulumi/pulumi-yaml/releases/download/v1.38.16/pulumi-language-yaml-v1.38.16-linux-amd64.tar.gz"
+        },
+        {
+          "hash": "sha256-r0TK6iXg4KlDByZO42+SfLGC0rKfdNHWLk3lTCqYqew=",
+          "mirrors": [],
+          "path": "archive-1",
+          "pulumi": {
+            "directory": "resource-random-v4.14.0",
+            "spec": {
+              "Checksums": null,
+              "Kind": "resource",
+              "Name": "random",
+              "PluginDownloadURL": "",
+              "Version": "4.14.0"
+            }
+          },
+          "url": "https://github.com/pulumi/pulumi-random/releases/download/v4.14.0/pulumi-resource-random-v4.14.0-linux-amd64.tar.gz"
+        }
+      ]
+    }
+  },
+  "version": 1
+}
