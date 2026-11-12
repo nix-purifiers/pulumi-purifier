@@ -44,7 +44,7 @@
           meta.description = "Lock native Pulumi dependencies";
         };
       });
-      lib.pulumi-purifier.readLock = import ./nix/read-lock.nix { lib = nixpkgs.lib; };
+      lib.pulumi-purifier = import ./lib-overlays/default { lib = nixpkgs.lib; };
       checks = forAll (
         system:
         let

@@ -21,12 +21,12 @@
 stdenvNoCC.mkDerivation {
   pname = "pulumi-purifier";
   version = "0.1.0";
-  src = ../.;
+  src = ../..;
   nativeBuildInputs = [ makeWrapper ];
   dontBuild = true;
   installPhase = ''
     mkdir -p "$out/bin" "$out/lib/pulumi-purifier"
-    cp -r pulumi_purifier nix native "$out/lib/pulumi-purifier/"
+    cp -r pulumi_purifier nix lib-overlays pkgs native "$out/lib/pulumi-purifier/"
     install -m755 bin/pulumi-purifier "$out/bin/pulumi-purifier"
     for file in realize release; do
       substituteInPlace "$out/lib/pulumi-purifier/nix/$file.nix" --replace-fail '@nixpkgs@' '${nixpkgsSrc}' --replace-fail '@purifier@' '${purifierSrc}'
