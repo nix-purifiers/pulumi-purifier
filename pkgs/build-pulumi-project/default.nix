@@ -22,7 +22,7 @@
 }:
 let
   lock = purifier.checkLock (
-    import ./read-lock.nix { inherit lib; } {
+    import ../../lib-overlays/default/read-lock.nix { inherit lib; } {
       inherit src lockFile;
       system = stdenv.hostPlatform.system;
     }
@@ -42,11 +42,11 @@ let
       ]);
   };
   driver = lib.fileset.toSource {
-    root = ../.;
+    root = ../..;
     fileset = lib.fileset.unions [
-      ../pulumi_purifier/common.py
-      ../pulumi_purifier/layout.py
-      ../native/check.py
+      ../../pulumi_purifier/common.py
+      ../../pulumi_purifier/layout.py
+      ../../native/check.py
     ];
   };
   companion = writeText "pulumi-purifier.lock.json" (builtins.readFile lockFile);

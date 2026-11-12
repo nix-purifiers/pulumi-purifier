@@ -21,6 +21,6 @@ pkgs.lib.makeScope pkgs.newScope (scope: {
       capture = builtins.hashFile "sha256" ../native/capture.go;
     }
   );
-  cli = scope.callPackage ./cli.nix { inherit nixpkgsSrc purifierSrc; };
-  buildPulumiProject = scope.callPackage ./build-project.nix { };
+  cli = scope.callPackage ../pkgs/pulumi-purifier/default.nix { inherit nixpkgsSrc purifierSrc; };
+  buildPulumiProject = scope.callPackage ../pkgs/build-pulumi-project/default.nix { };
 })
